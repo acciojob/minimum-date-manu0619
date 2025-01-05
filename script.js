@@ -1,5 +1,11 @@
 function minDate(dates) {
   //write you code here
+	let sum=infinity;
+	for i of dates{
+		a=i.split('/');
+		let b=parseInt(a[0])*10000000+parseInt(a[1])*1000+parseInt(a[2]);
+		sum=min(b,sum);
+	}return sum
 }
 
 // Do not change the code
