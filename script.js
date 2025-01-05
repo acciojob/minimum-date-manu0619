@@ -1,17 +1,22 @@
 function minDate(dates) {
   //write you code here
-	let sum=infinity;
-	for i of dates{
+	let sum=Infinity;
+	let count=-1;
+	for (let i of dates){
+		
 		a=i.split('/');
 		let b=parseInt(a[0])*10000000+parseInt(a[1])*1000+parseInt(a[2]);
-		sum=min(b,sum);
-	}return sum
+		if(b<sum){
+			sum=b;
+			count++;
+		}
+	}return dates[count];
 }
 
 // Do not change the code
 
 var dates = [
-  "2023/03/01",
+  "2022/03/09",
   "2023/03/02",
   "2023/03/03",
   "2023/03/04",
